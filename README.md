@@ -17,6 +17,4 @@ The code is written in python, And code is typed in Sublime text
  * Any Editor
 
 ## Installation Process
-Go to Browser and enter
- -> `python3 download` and open first link. Choose your OS.(https://www.python.org/downloads/)
- -> `git` Click on this link. It is easy to downlaod git for you.(https://git-scm.com/downloads)
+ #### `python3 download` 
