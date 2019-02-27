@@ -18,7 +18,6 @@ The code is written in python, And code is typed in Sublime text
 
 ## Installation Process
  #### 1.python3 download
-
  ###### step-1-:
  go to the browser and enter `python3 download` in url.
  ###### step-2-:
