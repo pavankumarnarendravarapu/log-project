@@ -28,8 +28,8 @@ The code is written in python, and code is typed in Sublime text
 
  ## If you want my project
 
- #### Follw these steps.
- >You must install above links.
- >###### *Click on clone or download.
- >###### *Extract the file.
- >###### *Past the download file near the database folder.
+ #### Follw these steps-:
+ >####You must install above links.
+ >###### 1.Click on clone or download.
+ >###### 2.Extract the file.
+ >###### 3.Past the download file near the database folder.
