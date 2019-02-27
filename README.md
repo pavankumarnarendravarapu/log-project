@@ -8,3 +8,10 @@ The code is written in python, And code is typed in Sublime text
  * Print the article authors?
  * On which days did more than 1% of requests lead to errors?
  
+ ## Software Requirements
+ * python3
+ * Git
+ * Virtual-Box
+ * Vagrant
+ * PostgreSQL
+ * Any Editor
