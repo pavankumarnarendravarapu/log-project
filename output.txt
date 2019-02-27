@@ -10,4 +10,5 @@ Who are the most popular article authors of all time?
         4.Rudolf von Treppenwitz - 1185706 view
 
 On which days did more than 1% of requests lead to errors?
+        July 17,2016 - 2.26% errors
 
