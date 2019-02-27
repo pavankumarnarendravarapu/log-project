@@ -15,3 +15,7 @@ The code is written in python, And code is typed in Sublime text
  * Vagrant
  * PostgreSQL
  * Any Editor
+
+## Installation Process
+Go to Browser and enter `python3 download` and open first link. Choose your OS.
+(https://www.python.org/downloads/)
