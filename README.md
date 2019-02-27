@@ -40,14 +40,13 @@ The code is written in python, and code is typed in Sublime text
 > * Click on right button.
 > * Open `gitbash` here.
 
+###### Launch the `vagrant` 
 
 ```sh
-
 vagrant up
-
-vagrant ssh
-
 ```
+###### Run the `vagrant`
+
 ```sh
-$ node app
+vagrant ssh
 ```
