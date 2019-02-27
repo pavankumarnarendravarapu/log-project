@@ -37,4 +37,11 @@ The code is written in python, and code is typed in Sublime text
 ## How to run Log-Analysis-Project
 
 > * First place the all files in `vagrant` folrder
- 
+> * Click on right button.
+> * Open `gitbash` here.
+
+
+```sh
+vagrant up
+vagrant ssh
+```
