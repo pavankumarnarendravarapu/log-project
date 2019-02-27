@@ -9,14 +9,14 @@ The code is written in python, And code is typed in Sublime text
  * On which days did more than 1% of requests lead to errors?
  
  ## Software Requirements
- * python3
- * Git-Bash
- * Virtual-Box
- * Vagrant
- * PostgreSQL
- * Any Editor
+ * `python3` - It is a general-purpose interpreted, interactive, object-oriented, and high-level programming language.
+ * `Git-Bash` - Git is a distributed version-control system for tracking changes in source code.
+ * `Virtual-Box`
+ * `Vagrant`
+ * `PostgreSQL`
+ * `Any Editor`
 
-## Installation Process
+## Installation Links
  #### 1.python3 download
  ###### step-1-: go to the browser and enter `python3 download` in url.
  ###### step-2-: And it shows a web page. Click on first link -> https://www.google.com/search?q=python+3+download&rlz=1C1CHBF_enIN828IN828&oq=python3++d&aqs=chrome.1.69i57j0l5.7815j0j7&sourceid=chrome&ie=UTF-8
@@ -24,4 +24,5 @@ The code is written in python, And code is typed in Sublime text
  ###### step-4-: If download is completed. Open the python3 file and install it.
 
  #### 2.Git-Bash download
- ###### step
+ ###### step-1-: Enter `git download`
+ ###### step-2-: 
