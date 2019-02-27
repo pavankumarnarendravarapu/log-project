@@ -16,8 +16,12 @@ The code is written in python, And code is typed in Sublime text
  * `PostgreSQL` - It is an object-relational database system that uses and extendds the SQL language combined with many features that safely.
  * `Any Editor` - Like (Sublime text, Notepad, Notepad++, Visual Studio)
 
-## Installation Links
+## Donwload Links
  
- | Applications | Links |
+ | Softwares | Links |
  | ------------ | ----- |
  | Python3 | [https://www.python.org/downloads/] |
+ | Git-Bash | [https://git-scm.com/downloads] |
+ | Virtual-Box | [https://www.virtualbox.org/wiki/Downloads] |
+ | Vagrant | [https://www.vagrantup.com/downloads.html] |
+ | PostgreSQL | [https://www.enterprisedb.com/downloads/postgres-postgresql-downloads] |
