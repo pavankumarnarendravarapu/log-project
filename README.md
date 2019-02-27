@@ -42,6 +42,9 @@ The code is written in python, and code is typed in Sublime text
 
 
 ```sh
+
 vagrant up
+
 vagrant ssh
+
 ```
