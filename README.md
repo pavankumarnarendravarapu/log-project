@@ -11,10 +11,10 @@ The code is written in python, And code is typed in Sublime text
  ## Software Requirements
  * `python3` - It is a general-purpose interpreted, interactive, object-oriented, and high-level programming language.
  * `Git-Bash` - Git is a distributed version-control system for tracking changes in source code.
- * `Virtual-Box`
- * `Vagrant`
- * `PostgreSQL`
- * `Any Editor`
+ * `Virtual-Box` - Oracle VM VirtualBox is a free and open-source hosted hypervisor.
+ * `Vagrant` - It is an open-source softwarw product for building and maintaining portable virtual software development environmeants.
+ * `PostgreSQL` - It is an object-relational database system that uses and extendds the SQL language combined with many features that safely.
+ * `Any Editor` - Means like (Sublime text, Notepad, Notepad++, Visual Studio)
 
 ## Installation Links
  #### 1.python3 download
