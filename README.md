@@ -18,12 +18,9 @@ The code is written in python, And code is typed in Sublime text
 
 ## Installation Process
  #### 1.python3 download
- ###### step-1-:
- go to the browser and enter `python3 download` in url.
- ###### step-2-:
- And it shows a web page. Click on first link -> https://www.google.com/search?q=python+3+download&rlz=1C1CHBF_enIN828IN828&oq=python3++d&aqs=chrome.1.69i57j0l5.7815j0j7&sourceid=chrome&ie=UTF-8
- ###### step-3-:
- After cick on the link, it redirect the page and click on downloads. First choose your OS -> https://www.python.org/downloads/
+ ###### step-1-: go to the browser and enter `python3 download` in url.
+ ###### step-2-: And it shows a web page. Click on first link -> https://www.google.com/search?q=python+3+download&rlz=1C1CHBF_enIN828IN828&oq=python3++d&aqs=chrome.1.69i57j0l5.7815j0j7&sourceid=chrome&ie=UTF-8
+ ###### step-3-: After cick on the link, it redirect the page and click on downloads. First choose your OS -> https://www.python.org/downloads/
  ###### step-4-: If download is completed. Open the python3 file and install it.
 
  #### 2.Git-Bash download
