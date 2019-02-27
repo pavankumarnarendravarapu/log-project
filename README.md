@@ -34,9 +34,7 @@ The code is written in python, and code is typed in Sublime text
  >###### 2.Extract the file.
  >###### 3.Past the download file near the database folder.
  >###### 4.Download database from here.
- ```sh
- [download](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
- ```
+ ###### [download](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
 ## How to run Log-Analysis-Project
 
