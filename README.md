@@ -56,9 +56,31 @@ vagrant ssh
 cd /vagrant
 ```
 
-###### Check the files
+###### Check the files.
 
 ```sh
 ll or ls
 ```
-###### 
+###### Write your folder name.
+
+```sh
+cd folder name
+```
+
+###### Check the files.
+
+```sh
+ll or ls
+```
+
+###### Load the data in local database.
+
+```sh
+psql -d news -f newsdata.sql
+```
+
+###### Run python file.
+
+```sh
+filename.py
+```
