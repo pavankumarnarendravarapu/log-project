@@ -2,7 +2,7 @@
 It is in the part of [UDACITY_FULL_STACK](https://in.udacity.com/course/full-stack-web-developer-nanodegree--nd004)
 ## What it is and does-:
 This reporting tool is a python program using the `psycopg2` module to connect to the database. 
-The code is written in python, And code is typed in Sublime text
+The code is written in python, and code is typed in Sublime text
 
  * It prints the popular articles?
  * Print the article authors?
@@ -25,3 +25,4 @@ The code is written in python, And code is typed in Sublime text
  | Virtual-Box | [https://www.virtualbox.org/wiki/Downloads] |
  | Vagrant | [https://www.vagrantup.com/downloads.html] |
  | PostgreSQL | [https://www.enterprisedb.com/downloads/postgres-postgresql-downloads] |
+ | Sublime text | [https://www.sublimetext.com/3] |
