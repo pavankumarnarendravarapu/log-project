@@ -48,3 +48,6 @@ vagrant up
 vagrant ssh
 
 ```
+```sh
+$ node app
+```
