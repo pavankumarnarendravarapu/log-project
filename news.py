@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+import psycopg2
+from datetime import datetime
+
+dbName = "news"
+
+first_1 =  """
+SELECT articles.title,
+     count(*)
+FROM log,
+   articles
+WHERE log.path = '/article/' || articles.slug
+GROUP BY articles.title
+ORDER BY count(*) DESC
+LIMIT 3;
+"""
+
+secnd_2 = """
+SELECT authors.name,
+     count(*)
+FROM log,
+   articles,
+   authors
+WHERE log.path = '/article/' || articles.slug
+GROUP BY authors.name
+ORDER BY count(*) DESC;
+"""
+
+third_3 = """
+SELECT day, perc FROM (
+SELECT day, round((sum(requests)/(SELECT count(*) FROM log WHERE 
+substring(cast(log.time as text), 0, 11) = day) * 100), 2) as 
+perc FROM (select substring(cast(log.time as text), 0, 11) as 
+day, count(*) as requests FROM log 
+WHERE status like '%404%' GROUP by day) 
+as log_percentage GROUP by day ORDER by perc desc) as final_query 
+WHERE perc >= 1
+"""
+
+def results(query):
+    con = psycopg2.connect("dbname={}".format(dbName))
+    cur = con.cursor()
+
+    try:
+        cur.execute(query)
+    except Exception as e:
+        print(e)
+    else:
+        return cur.fetchall()
+    finally:
+        con.close()
+
+
+def print_results(query_results):
+    for i, res in enumerate(query_results):
+        print("\t"+str(i+1)+"."+str(res[0])+" - "+str(res[1])+" views")
+
+
+def print_errors(query_results):
+    for result in query_results:
+        date = result[0]
+        date_obj = datetime.strptime(date, "%Y-%m-%d")
+        formatted_date = datetime.strftime(date_obj, "%B %d,%Y")
+        print("\t"+str(formatted_date)+" - "+str(result[1])+"% errors")
+
+
+if __name__ == '__main__':
+    print("What are the most popular three articles of all time?")
+    articles = results(first_1)
+    print_results(articles)
+    print("%"*70)
+
+    print("Who are the most popular article authors of all time?")
+    authors = results(secnd_2)
+    print_results(authors)
+    print("%"*70)
+
+    print("On which days did more than 1% of requests lead to errors?")
+    error_days = results(third_3)
+    print_errors(error_days)
+    print("-"*50)
