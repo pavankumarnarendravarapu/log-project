@@ -30,7 +30,6 @@ The code is written in python, and code is typed in Sublime text
 
  >First you install above Softawares.
  >If you want my project follow these steps.
-
- ####### Click on clone or download.
- ####### Extract the file.
- ####### Past the download file near database folder.
+ ###### Click on clone or download.
+ ###### Extract the file.
+ ###### Past the download file near database folder.
