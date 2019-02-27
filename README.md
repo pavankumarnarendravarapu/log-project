@@ -17,4 +17,4 @@ The code is written in python, And code is typed in Sublime text
  * Any Editor
 
 ## Installation Process
- #### `python3 download` 
+ #####  ` * python3 download` 
