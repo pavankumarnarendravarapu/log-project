@@ -40,13 +40,25 @@ The code is written in python, and code is typed in Sublime text
 > * Click on right button.
 > * Open `gitbash` here.
 
-###### Launch the `vagrant` 
+###### Launch the `vagrant`. 
 
 ```sh
 vagrant up
 ```
-###### Run the `vagrant`
+###### Run the `vagrant`.
 
 ```sh
 vagrant ssh
 ```
+###### Change the directory into `vagrant` folder.
+
+```sh
+cd /vagrant
+```
+
+###### Check the files
+
+```sh
+ll or ls
+```
+###### 
