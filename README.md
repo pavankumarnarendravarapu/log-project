@@ -85,3 +85,5 @@ psql -d news -f newsdata.sql
 ```sh
 filename.py
 ```
+
+#### Note-: Queries takes some time to run.
