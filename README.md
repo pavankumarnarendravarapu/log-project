@@ -25,3 +25,12 @@ The code is written in python, and code is typed in Sublime text
  | Vagrant | [https://www.vagrantup.com/downloads.html] |
  | PostgreSQL | [https://www.enterprisedb.com/downloads/postgres-postgresql-downloads] |
  | Sublime text | [https://www.sublimetext.com/3] |
+
+ ## How to run Log-Anlysis Project
+
+ >First you install above Softawares.
+ >If you want my project follow these steps.
+
+ ####### Click on clone or download.
+ ####### Extract the file.
+ ####### Past the download file near database folder.
