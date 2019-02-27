@@ -3,8 +3,8 @@
 ## What it is and does-:
 >This reporting tool is a python program using the `psycopg2` module to connect to the database. 
 The code is written in python, and code is typed in Sublime text
- >* It prints the popular articles?
- >* Print the article authors?
+ >* It prints the most popular articles?
+ >* Print the most popular article authors?
  >* On which days did more than 1% of requests lead to errors?
  
  ## Software Requirements
@@ -33,3 +33,8 @@ The code is written in python, and code is typed in Sublime text
  >###### 2.Click on clone or download.
  >###### 3.Extract the file.
  >###### 4.Past the download file near the database folder.
+
+## How to run Log-Analysis-Project
+
+> * First place the all files in `vagrant` folrder
+ 
