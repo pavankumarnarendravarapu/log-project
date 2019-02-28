@@ -83,7 +83,7 @@ psql -d news -f newsdata.sql
 ###### Run python file.
 
 ```sh
-filename.py
+python filename.py
 ```
 
 #### Note-: Queries takes some time to run.
