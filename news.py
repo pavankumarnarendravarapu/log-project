@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 import psycopg2
 from datetime import datetime
 
 dbName = "news"
-
-first_1 =  """
+first_1 = """
 SELECT articles.title,
      count(*)
 FROM log,
@@ -28,14 +27,15 @@ ORDER BY count(*) DESC;
 
 third_3 = """
 SELECT day, perc FROM (
-SELECT day, round((sum(requests)/(SELECT count(*) FROM log WHERE 
-substring(cast(log.time as text), 0, 11) = day) * 100), 2) as 
-perc FROM (select substring(cast(log.time as text), 0, 11) as 
-day, count(*) as requests FROM log 
-WHERE status like '%404%' GROUP by day) 
-as log_percentage GROUP by day ORDER by perc desc) as final_query 
+SELECT day, round((sum(requests)/(SELECT count(*) FROM log WHERE
+substring(cast(log.time as text), 0, 11) = day) * 100), 2) as
+perc FROM (select substring(cast(log.time as text), 0, 11) as
+day, count(*) as requests FROM log
+WHERE status like '%404%' GROUP by day)
+as log_percentage GROUP by day ORDER by perc desc) as final_query
 WHERE perc >= 1
 """
+
 
 def results(query):
     con = psycopg2.connect("dbname={}".format(dbName))
