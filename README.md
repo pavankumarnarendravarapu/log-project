@@ -2,7 +2,7 @@
 Log-Analysis-project
 </p> 
 
-<p align="left">
+<p align="right">
 By N.Pavan Kumar
 </p>
 
