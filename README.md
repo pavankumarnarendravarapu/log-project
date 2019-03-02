@@ -1,5 +1,9 @@
-# Log-Analysis-project-:
->It is in the part of [UDACITY_FULL_STACK](https://in.udacity.com/course/full-stack-web-developer-nanodegree--nd004)
+<p align="center"> 
+# Log-Analysis-project
+</p> 
+
+## By N.Pavan Kumar
+>It is in the part of UDACITY_FULL_STACK.
 ## What it is and does-:
 >This reporting tool is a python program using the `psycopg2` module to connect to the database. 
 The code is written in python, and code is typed in Sublime text
@@ -33,7 +37,6 @@ The code is written in python, and code is typed in Sublime text
  >###### 1.Click on clone or download.
  >###### 2.Extract the file.
  >###### 3.Past the download file near the database folder.
- >###### 4.Download database from here. --> [download-database](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
 ## How to run Log-Analysis-Project
 
