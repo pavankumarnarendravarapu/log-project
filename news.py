@@ -10,13 +10,13 @@ ORDER BY count(*) DESC
 LIMIT 3;
 """
 second_2 = """
-SELECT authors.name, count(*) AS num
-FROM log,articles,authors
-WHERE log.status='200 OK'
-and authors.id = articles.author
-and articles.slug = substr(log.path, 10)
+SELECT authors.name, count(*) AS views 
+FROM articles inner
+JOIN authors ON articles.author = authors.id INNER JOIN log
+ON log.path LIKE concat('%', articles.slug, '%') 
+WHERE log.status LIKE'200'
 GROUP BY authors.name
-ORDER BY num DESC;
+ORDER BY views DESC;
 """
 
 third_3 = """
@@ -49,23 +49,31 @@ def connect(dbName):
         return data, cur
 
 
-def article(queries):
+"""def article(queries):
     data, cur = connect(dbName)
     cur.execute(first_1)
     results = cur.fetchall()
     for res in results:
         print('-> {title} @ {count} views'.format(title=res[0], count=res[1]))
     cur.close()
-    data.close()
+    data.close()"""
+
+ def que_res(query):
+ 	data, cursor = connect()
+ 	cursor.execute(query)
+ 	return cursor.fetchall()
+ 	data.close()
 
 
-def author(res):
+def que_res(res):
     data, cur = connect(dbName)
     cur.execute(second_2)
     results = cur.fetchall()
-    for name, num in authors:
-        print(" {} @ {} views".format(name, num))
-    cur.close()pt
+    for index, res in enumerate(res[0]):
+        print(
+        	"\t", index+1, "@", res[0],
+        	"\t - ", str(res[1]), "views")
+    cur.close()
     data.close()
 
 
@@ -85,8 +93,8 @@ if __name__ == '__main__':
     secqn = "2.Who are the most popular article authors of all time?"
     thirdqn = "3.On which days did more than 1% of requests lead to errors?"
     print(firstqn)
-    articleop = article(first_1), firstqn
+    articleop = que_res(first_1), firstqn
     print(secqn)
-    authorop = author(second_2), secqn
+    authorop = que_res(second_2), secqn
     print(thirdqn)
     errorop = error(third_3), thirdqn
