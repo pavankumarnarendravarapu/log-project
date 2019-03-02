@@ -10,7 +10,7 @@
  - Print the most popular article authors?
  - On which days did more than 1% of requests lead to errors?
  
- ## Software Requirements
+ ## Softwares for log analysis
 
  * `python3` - It is a general-purpose interpreted, interactive, object-oriented, and high-level programming language.
  * `Git-Bash` - Git is a distributed version-control system for tracking changes in source code.
