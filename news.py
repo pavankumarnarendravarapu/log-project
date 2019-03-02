@@ -10,11 +10,13 @@ ORDER BY count(*) DESC
 LIMIT 3;
 """
 second_2 = """
-SELECT authors.name, count(*)
-FROM log, articles, authors
-WHERE log.path = '/article/' || articles.slug
+SELECT authors.name, count(*) AS num
+FROM log,articles,authors
+WHERE log.status='200 OK'
+and authors.id = articles.author
+and articles.slug = substr(log.path, 10)
 GROUP BY authors.name
-ORDER BY count(*) DESC;
+ORDER BY num DESC;
 """
 
 third_3 = """
@@ -45,8 +47,6 @@ def connect(dbName):
         data = psycopg2.connect("dbname={}".format(dbName))
         cur = data.cursor()
         return data, cur
-    except:
-        print ("Unable to connect to the database")
 
 
 def article(queries):
@@ -63,10 +63,9 @@ def author(res):
     data, cur = connect(dbName)
     cur.execute(second_2)
     results = cur.fetchall()
-    for res in results:
-        print('-> {author} @ {count} views'.format(author=res[0],
-              count=res[1]))
-    cur.close()
+    for name, num in authors:
+        print(" {} @ {} views".format(name, num))
+    cur.close()pt
     data.close()
 
 

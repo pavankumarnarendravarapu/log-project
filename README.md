@@ -30,13 +30,6 @@
  | PostgreSQL | [https://www.enterprisedb.com/downloads/postgres-postgresql-downloads] |
  | Sublime text | [https://www.sublimetext.com/3] |
 
- ## If you want my project
-
- ### Follw these steps-:
- #### You must install above links.
- >###### 1.Click on clone or download.
- >###### 2.Extract the file.
- >###### 3.Past the download file near the database folder.
 
 ## How to run Log-Analysis-Project
 
@@ -53,7 +46,7 @@
  - cd /folder_name
  - ll
  - psql -d news -f newsdata.sql
- - python folder_name.py
+ - python news.py
 ```
 <p align="right">
 By N.Pavan Kumar
