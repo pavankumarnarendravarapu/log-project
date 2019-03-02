@@ -1,5 +1,7 @@
-<p align="center";  width="20%"; height="5%"> 
-Log-Analysis-project
+<p align="center"> 
+	
+# Log-Analysis-project
+
 </p> 
 
 <p align="right">
