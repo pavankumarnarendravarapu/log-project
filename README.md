@@ -1,7 +1,6 @@
-<p align="center"> 
-	
-# Log-Analysis-project
+<p align="center" > 
 
+#Log-Analysis-project
 </p> 
 
 <p align="right">
