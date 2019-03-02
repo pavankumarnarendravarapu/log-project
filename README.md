@@ -1,4 +1,4 @@
-<p align="center" width=" 200px" height="500px" font-weight="bold"> 
+<p align="center" width=" 20%" height="5%" font-weight="bold"> 
 Log-Analysis-project
 </p> 
 
