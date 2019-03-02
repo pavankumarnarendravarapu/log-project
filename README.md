@@ -1,21 +1,20 @@
-<p align="center"> 
-<p #Log-Analysis-project align="center"></p> 
-</p> 
-
+#Log-Analysis-project 
 <p align="right">
 By N.Pavan Kumar
 </p>
 
->This project is the part of UDACITY_FULL_STACK.
+> #### This project is the part of UDACITY_FULL_STACK.
 
 ## Description-:
->We import a package from `psycopg2` module to connect to the database. 
+>We import a package from `psycopg2`. 
 >The code is written in python.
- * It prints the most popular articles?
- * Print the most popular article authors?
- * On which days did more than 1% of requests lead to errors?
+
+ - It prints the most popular articles?
+ - Print the most popular article authors?
+ - On which days did more than 1% of requests lead to errors?
  
  ## Software Requirements
+
  * `python3` - It is a general-purpose interpreted, interactive, object-oriented, and high-level programming language.
  * `Git-Bash` - Git is a distributed version-control system for tracking changes in source code.
  * `Virtual-Box` - Oracle VM VirtualBox is a free and open-source hosted hypervisor.
@@ -48,50 +47,18 @@ By N.Pavan Kumar
 > * Click on right button.
 > * Open `gitbash` here.
 
-###### Launch the vagrant. 
 
 ```sh
-vagrant up
+ - vagrant up
+ - vagrant ssh
+ - cd /vagrant
+ - ll
+ - cd /folder_name
+ - ll
+ - psql -d news -f newsdata.sql
+ - python folder_name.py
 ```
-###### Run the vagrant.
-
-```sh
-vagrant ssh
-```
-###### Change the directory into vagrant folder.
-
-```sh
-cd /vagrant
-```
-
-###### Check the files.
-
-```sh
-ll or ls
-```
-###### Write your folder name.
-
-```sh
-cd folder name
-```
-
-###### Check the files.
-
-```sh
-ll or ls
-```
-
-###### Load the data in local database.
-
-```sh
-psql -d news -f newsdata.sql
-```
-
-###### Run python file.
-
-```sh
-python filename.py
-```
-
-#### Note-: Queries takes some time to run.
+<p align="right">
+By N.Pavan Kumar
+</p>
 
