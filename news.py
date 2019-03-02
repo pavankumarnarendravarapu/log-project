@@ -26,14 +26,24 @@ ORDER BY count(*) DESC;
 """
 
 third_3 = """
-SELECT day, perc FROM (
-SELECT day, round((sum(requests)/(SELECT count(*) FROM log WHERE
-substring(cast(log.time as text), 0, 11) = day) * 100), 2) as
-perc FROM (select substring(cast(log.time as text), 0, 11) as
-day, count(*) as requests FROM log
-WHERE status like '%404%' GROUP by day)
-as log_percentage GROUP by day ORDER by perc desc) as final_query
-WHERE perc >= 1
+SELECT total.day,
+ROUND(((errors.error_requests*1.0) / total.requests), 3)
+AS percent
+        FROM (
+              SELECT date_trunc('day', time) "day", count(*) AS error_requests
+              FROM log
+              WHERE status LIKE '404%'
+              GROUP BY day
+              ) AS errors
+              JOIN(
+              SELECT date_trunc('day', time) "day", count(*) AS requests
+              FROM log
+              GROUP BY day)
+              AS total
+              ON total.day=errors.day
+              WHERE (ROUND((
+              (errors.error_requests*1.0) / total.requests), 3) > 0.01)
+              ORDER BY persent DESC;
 """
 
 
