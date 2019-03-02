@@ -2,11 +2,11 @@
 Log-Analysis-project
 </p> 
 
-<p align="left" >
+<p align="left">
 By N.Pavan Kumar
 </p>
 
->It is in the part of UDACITY_FULL_STACK.
+>This project is the part of UDACITY_FULL_STACK.
 
 ## Description-:
 >This reporting tool is a python program using the `psycopg2` module to connect to the database. 
