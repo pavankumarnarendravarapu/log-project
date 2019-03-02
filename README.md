@@ -1,10 +1,11 @@
 <p align="center" width=" 20%" height="5%" font-weight="bold"> 
 Log-Analysis-project
 </p> 
-
+<p align="left" >
 ## By N.Pavan Kumar
+</p>
 >It is in the part of UDACITY_FULL_STACK.
-## What it is and does-:
+## Description-:
 >This reporting tool is a python program using the `psycopg2` module to connect to the database. 
 The code is written in python, and code is typed in Sublime text
  >* It prints the most popular articles?
