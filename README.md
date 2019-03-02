@@ -1,4 +1,6 @@
-<div class="main">
+<head>
+	<body>
+		<div class="main">
 Log-Analysis-project
 </div>
 <style>
@@ -8,6 +10,8 @@ Log-Analysis-project
 		width: 40%;
 	}
 </style>
+</body>
+</head>
 
 <p align="right">
 By N.Pavan Kumar
