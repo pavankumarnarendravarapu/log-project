@@ -1,6 +1,13 @@
-<p align="center" style="width:20%; height:5%"> 
+<div class="main">
 Log-Analysis-project
-</p> 
+</div>
+<style>
+	.class{
+		text-align: center;
+		height: 10%;
+		width: 40%;
+	}
+</style>
 
 <p align="right">
 By N.Pavan Kumar
@@ -9,11 +16,11 @@ By N.Pavan Kumar
 >This project is the part of UDACITY_FULL_STACK.
 
 ## Description-:
->This reporting tool is a python program using the `psycopg2` module to connect to the database. 
-The code is written in python, and code is typed in Sublime text
- >* It prints the most popular articles?
- >* Print the most popular article authors?
- >* On which days did more than 1% of requests lead to errors?
+>We import a package from `psycopg2` module to connect to the database. 
+>The code is written in python.
+ * It prints the most popular articles?
+ * Print the most popular article authors?
+ * On which days did more than 1% of requests lead to errors?
  
  ## Software Requirements
  * `python3` - It is a general-purpose interpreted, interactive, object-oriented, and high-level programming language.
