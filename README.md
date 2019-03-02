@@ -1,17 +1,6 @@
-<head>
-	<body>
-		<div class="main">
+<p align="center";  width="20%"; height="5%"> 
 Log-Analysis-project
-</div>
-<style>
-	.class{
-		text-align: center;
-		height: 10%;
-		width: 40%;
-	}
-</style>
-</body>
-</head>
+</p> 
 
 <p align="right">
 By N.Pavan Kumar
