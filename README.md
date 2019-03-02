@@ -1,7 +1,4 @@
-#Log-Analysis-project 
-<p align="right">
-By N.Pavan Kumar
-</p>
+# Log-Analysis-project
 
 > #### This project is the part of UDACITY_FULL_STACK.
 
