@@ -1,7 +1,7 @@
 # !/usr/bin/env python3
 import psycopg2
 dbName = "news"
-first_1 =  """
+first_1 = """
 SELECT articles.title, count(*)
 FROM log, articles
 WHERE log.path = '/article/' || articles.slug
@@ -41,49 +41,53 @@ SELECT * FROM erra WHERE ers > 1;
 
 
 def connect(dbName):
-	try:
-		data = psycopg2.connect("dbname={}".format(dbName))
-		cur = data.cursor()
-		return data, cur
-	except:
-		print ("Unable to connect to the database")
+    try:
+        data = psycopg2.connect("dbname={}".format(dbName))
+        cur = data.cursor()
+        return data, cur
+    except:
+        print ("Unable to connect to the database")
+
 
 def article(queries):
-	data, cur = connect(dbName)
-	cur.execute(first_1)
-	results = cur.fetchall()
-	for res in results:
-		print('-> {title} @ {count} views'.format(title=res[0], count=res[1]))
-	cur.close()
-	data.close()
+    data, cur = connect(dbName)
+    cur.execute(first_1)
+    results = cur.fetchall()
+    for res in results:
+        print('-> {title} @ {count} views'.format(title=res[0], count=res[1]))
+    cur.close()
+    data.close()
+
 
 def author(res):
-	data, cur = connect(dbName)
-	cur.execute(second_2)
-	results = cur.fetchall()
-	for res in results:
-		print('-> {author} @ {count} views'.format(author=res[0], count=res[1]))
-	cur.close()
-	data.close()
+    data, cur = connect(dbName)
+    cur.execute(second_2)
+    results = cur.fetchall()
+    for res in results:
+        print('-> {author} @ {count} views'.format(author=res[0],
+              count=res[1]))
+    cur.close()
+    data.close()
+
 
 def error(res):
-	data, cur = connect(dbName)
-	cur.execute(third_3)
-	results = cur.fetchall()
-	for res in results:
-		print(
-			'-> {date:%B %d, %Y} @ {erra:.1f}% errors'.
-			format(date=res[0], erra=res[1]))
-	cur.close()
-	data.close()
+    data, cur = connect(dbName)
+    cur.execute(third_3)
+    results = cur.fetchall()
+    for res in results:
+        print(
+            '-> {date:%B %d, %Y} @ {erra:.1f}% errors'.
+            format(date=res[0], erra=res[1]))
+        cur.close()
+        data.close()
 
 if __name__ == '__main__':
-	firstqn = "1.What are the most popular three articles of the time?"
-	secqn = "2.Who are the most popular article authors of all time?"
-	thirdqn = "3.On which days did more than 1% of requests lead to errors?"
-	print(firstqn)
-	articleop = article(first_1), firstqn
-	print(secqn)
-	authorop = author(second_2), secqn
-	print(thirdqn)
-	errorop = error(third_3), thirdqn
+    firstqn = "1.What are the most popular three articles of the time?"
+    secqn = "2.Who are the most popular article authors of all time?"
+    thirdqn = "3.On which days did more than 1% of requests lead to errors?"
+    print(firstqn)
+    articleop = article(first_1), firstqn
+    print(secqn)
+    authorop = author(second_2), secqn
+    print(thirdqn)
+    errorop = error(third_3), thirdqn
