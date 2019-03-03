@@ -41,6 +41,10 @@
 ```sh
  - vagrant up
  - vagrant ssh
+ - cd /vagrant
+ - ll
+ - cd /folrder_name
+ - ll
  - psql -d news -f newsdata.sql
  - python news.py
 ```

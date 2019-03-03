@@ -10,13 +10,15 @@ ORDER BY count(*) DESC
 LIMIT 3;
 """
 second_2 = """
-SELECT authors.name, count(*) AS views 
-FROM articles inner
-JOIN authors ON articles.author = authors.id INNER JOIN log
-ON log.path LIKE concat('%', articles.slug, '%') 
-WHERE log.status LIKE'200'
+SELECT authors.name, COUNT(*) AS num
+FROM authors
+JOIN articles
+ON authors.id = articles.author
+JOIN log
+ON log.path like concat('/article/%', articles.slug)
 GROUP BY authors.name
-ORDER BY views DESC;
+ORDER BY num DESC
+
 """
 
 third_3 = """
@@ -47,32 +49,27 @@ def connect(dbName):
         data = psycopg2.connect("dbname={}".format(dbName))
         cur = data.cursor()
         return data, cur
+    except:
+        print (err)
 
 
-"""def article(queries):
+def article(queries):
     data, cur = connect(dbName)
     cur.execute(first_1)
     results = cur.fetchall()
     for res in results:
         print('-> {title} @ {count} views'.format(title=res[0], count=res[1]))
     cur.close()
-    data.close()"""
-
- def que_res(query):
- 	data, cursor = connect()
- 	cursor.execute(query)
- 	return cursor.fetchall()
- 	data.close()
+    data.close()
 
 
-def que_res(res):
+def author(res):
     data, cur = connect(dbName)
     cur.execute(second_2)
     results = cur.fetchall()
-    for index, res in enumerate(res[0]):
-        print(
-        	"\t", index+1, "@", res[0],
-        	"\t - ", str(res[1]), "views")
+    for res in results:
+        print('-> {author} @ {count} views'.format(author=res[0],
+              count=res[1]))
     cur.close()
     data.close()
 
@@ -86,15 +83,15 @@ def error(res):
             '-> {date:%B %d, %Y} @ {erra:.1f}% errors'.
             format(date=res[0], erra=res[1]))
         cur.close()
-        data.close()
+
 
 if __name__ == '__main__':
     firstqn = "1.What are the most popular three articles of the time?"
     secqn = "2.Who are the most popular article authors of all time?"
     thirdqn = "3.On which days did more than 1% of requests lead to errors?"
     print(firstqn)
-    articleop = que_res(first_1), firstqn
+    articleop = article(first_1), firstqn
     print(secqn)
-    authorop = que_res(second_2), secqn
+    authorop = author(second_2), secqn
     print(thirdqn)
     errorop = error(third_3), thirdqn
